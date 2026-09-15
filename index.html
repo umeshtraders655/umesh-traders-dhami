@@ -3,54 +3,665 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Umesh Traders Dhami | Hardware & Building Materials</title>
-<meta name="description" content="Umesh Traders Dhami - hardware and building materials for your construction and home needs.">
+
+<meta name="description" content="Umesh Traders Dhami - quality hardware, building materials, roofing sheets, sanitary, paint and home improvement products.">
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#172033;background:#f7f8fb;line-height:1.6}
-header{background:#101827;color:white;position:sticky;top:0;z-index:5}.nav{max-width:1150px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}.logo{font-size:22px;font-weight:800}.logo span{color:#f59e0b}nav a{color:white;text-decoration:none;margin-left:22px;font-weight:600}
-.hero{background:linear-gradient(135deg,#111827,#263b63);color:white;padding:90px 20px}.hero-inner{max-width:1150px;margin:auto}.badge{display:inline-block;background:#f59e0b;color:#111827;padding:7px 13px;border-radius:30px;font-weight:800}.hero h1{font-size:clamp(40px,7vw,70px);line-height:1.05;margin:18px 0 15px}.hero p{font-size:20px;max-width:650px;color:#dbe4f5}.btn{display:inline-block;padding:13px 20px;border-radius:9px;text-decoration:none;font-weight:800;margin:8px 8px 0 0}.primary{background:#f59e0b;color:#111827}.secondary{border:1px solid #9fb0cc;color:white}
-section{max-width:1150px;margin:auto;padding:70px 20px}.title{text-align:center;margin-bottom:35px}.title h2{font-size:36px;margin:0}.title p{color:#64748b}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border-radius:16px;padding:26px;box-shadow:0 8px 30px #17203312;border:1px solid #e8ebf1}.icon{font-size:36px}.card h3{margin:10px 0 6px}.card p{color:#64748b;margin:0}
-.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:#111827;color:white;border-radius:20px;padding:35px}.about-box h2{font-size:36px;margin-top:0}.ticks{padding:0;list-style:none}.ticks li{margin:12px 0}.ticks li:before{content:"✓";color:#f59e0b;font-weight:bold;margin-right:10px}
-.contact{background:#111827;color:white;border-radius:22px;padding:45px}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact a{color:#fbbf24;text-decoration:none}
-footer{background:#0b1220;color:#aeb9cb;text-align:center;padding:28px 20px}
-@media(max-width:800px){nav{display:none}.grid,.about,.contact-grid{grid-template-columns:1fr}.hero{padding:65px 20px}}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#172033;
+  background:#f7f8fb;
+  line-height:1.6;
+}
+
+header{
+  background:#101827;
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.nav{
+  max-width:1150px;
+  margin:auto;
+  padding:16px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+}
+
+.logo span{
+  color:#f59e0b;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:22px;
+  font-weight:600;
+}
+
+nav a:hover{
+  color:#f59e0b;
+}
+
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#111827,#263b63);
+  color:white;
+  padding:90px 20px;
+}
+
+.hero-inner{
+  max-width:1150px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  background:#f59e0b;
+  color:#111827;
+  padding:7px 13px;
+  border-radius:30px;
+  font-weight:800;
+}
+
+.hero h1{
+  font-size:clamp(40px,7vw,70px);
+  line-height:1.05;
+  margin:18px 0 15px;
+}
+
+.hero p{
+  font-size:20px;
+  max-width:650px;
+  color:#dbe4f5;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:9px;
+  text-decoration:none;
+  font-weight:800;
+  margin:8px 8px 0 0;
+}
+
+.primary{
+  background:#f59e0b;
+  color:#111827;
+}
+
+.secondary{
+  border:1px solid #9fb0cc;
+  color:white;
+}
+
+.whatsapp{
+  background:#22c55e;
+  color:white;
+}
+
+/* SECTIONS */
+section{
+  max-width:1150px;
+  margin:auto;
+  padding:70px 20px;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.title h2{
+  font-size:36px;
+  margin:0;
+}
+
+.title p{
+  color:#64748b;
+}
+
+/* PRODUCTS */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.card{
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 8px 30px #17203312;
+  border:1px solid #e8ebf1;
+  overflow:hidden;
+  transition:transform .2s,box-shadow .2s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 35px #17203320;
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+  margin-bottom:16px;
+  background:#eef1f5;
+}
+
+.card h3{
+  margin:10px 0 6px;
+  font-size:21px;
+}
+
+.card p{
+  color:#64748b;
+  margin:0;
+}
+
+/* ABOUT */
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+
+.about-box{
+  background:#111827;
+  color:white;
+  border-radius:20px;
+  padding:35px;
+}
+
+.about-box h2{
+  font-size:36px;
+  margin-top:0;
+}
+
+.ticks{
+  padding:0;
+  list-style:none;
+}
+
+.ticks li{
+  margin:12px 0;
+}
+
+.ticks li:before{
+  content:"✓";
+  color:#f59e0b;
+  font-weight:bold;
+  margin-right:10px;
+}
+
+/* CONTACT */
+.contact{
+  background:#111827;
+  color:white;
+  border-radius:22px;
+  padding:45px;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.contact a{
+  color:#fbbf24;
+  text-decoration:none;
+}
+
+.phone-list{
+  margin:20px 0;
+}
+
+.phone-list p{
+  margin:10px 0;
+}
+
+.phone-list a{
+  color:#fbbf24;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  background:#0b1220;
+  color:#aeb9cb;
+  text-align:center;
+  padding:28px 20px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  nav{
+    display:none;
+  }
+
+  .grid,
+  .about,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:65px 20px;
+  }
+
+  .hero h1{
+    font-size:45px;
+  }
+
+  .card img{
+    height:240px;
+  }
+
+  .contact{
+    padding:30px 22px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header><div class="nav"><div class="logo">UMESH TRADERS <span>DHAMI</span></div><nav><a href="#products">Products</a><a href="#about">About</a><a href="#contact">Contact</a></nav></div></header>
 
-<div class="hero"><div class="hero-inner">
-<span class="badge">Trusted Hardware & Building Materials</span>
-<h1>Build Better.<br>Build with Umesh Traders.</h1>
-<p>Your trusted destination in Dhami for quality hardware, building materials and home-improvement products.</p>
-<a class="btn primary" href="#products">Explore Products</a>
-<a class="btn secondary" href="#contact">Get in Touch</a>
-</div></div>
+<!-- HEADER -->
+<header>
+  <div class="nav">
 
-<section id="products">
-<div class="title"><h2>Our Products</h2><p>Everything you need for construction, renovation and home improvement.</p></div>
-<div class="grid">
-<div class="card"><div class="icon">🏗️</div><h3>Cement & Building Materials</h3><p>Quality materials for strong and reliable construction.</p></div>
-<div class="card"><div class="icon">🔩</div><h3>Hardware & GI Fittings</h3><p>Screws, fittings and essential hardware for every project.</p></div>
-<div class="card"><div class="icon">🎨</div><h3>Paint & Finishing</h3><p>Products to give your home and projects the perfect finish.</p></div>
-<div class="card"><div class="icon">🚰</div><h3>Taps & Sanitary</h3><p>Taps, washbasins and sanitary solutions for modern homes.</p></div>
-<div class="card"><div class="icon">🏠</div><h3>Roofing Sheets</h3><p>Roofing solutions including quality sheet products.</p></div>
-<div class="card"><div class="icon">🧰</div><h3>General Hardware</h3><p>A wide range of practical products for builders and homeowners.</p></div>
+    <div class="logo">
+      UMESH TRADERS <span>DHAMI</span>
+    </div>
+
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+
+    <span class="badge">
+      Trusted Hardware & Building Materials
+    </span>
+
+    <h1>
+      Build Better.<br>
+      Build with Umesh Traders.
+    </h1>
+
+    <p>
+      Your trusted destination in Dhami for quality hardware,
+      building materials, roofing sheets, sanitary products,
+      paints and home-improvement products.
+    </p>
+
+    <a class="btn primary" href="#products">
+      Explore Products
+    </a>
+
+    <a class="btn secondary" href="#contact">
+      Get in Touch
+    </a>
+
+    <a class="btn whatsapp"
+       href="https://wa.me/919015157032"
+       target="_blank">
+      WhatsApp Us
+    </a>
+
+  </div>
 </div>
+
+
+<!-- PRODUCTS -->
+<section id="products">
+
+  <div class="title">
+    <h2>Our Products</h2>
+    <p>
+      Quality products for construction, renovation and home improvement.
+    </p>
+  </div>
+
+
+  <div class="grid">
+
+    <!-- PRODUCT 1 -->
+    <div class="card">
+
+      <img
+        src="2025-12-30-15-09-27-906.jpg"
+        alt="Umesh Traders Dhami Hardware Product"
+      >
+
+      <h3>
+        Hardware & Building Materials
+      </h3>
+
+      <p>
+        Quality materials for strong and reliable construction.
+      </p>
+
+    </div>
+
+
+    <!-- PRODUCT 2 -->
+    <div class="card">
+
+      <img
+        src="2025-12-30-15-09-56-241.jpg"
+        alt="Umesh Traders Dhami Hardware"
+      >
+
+      <h3>
+        Hardware Products
+      </h3>
+
+      <p>
+        Reliable hardware products for builders,
+        contractors and homeowners.
+      </p>
+
+    </div>
+
+
+    <!-- PRODUCT 3 -->
+    <div class="card">
+
+      <img
+        src="20260820_105827.jpg"
+        alt="Roofing Products Umesh Traders Dhami"
+      >
+
+      <h3>
+        Roofing Solutions
+      </h3>
+
+      <p>
+        Quality roofing products for homes,
+        shops and buildings.
+      </p>
+
+    </div>
+
+
+    <!-- PRODUCT 4 -->
+    <div class="card">
+
+      <img
+        src="ChatGPT Image Aug 26, 2026, 04_43_07 PM.png"
+        alt="Umesh Traders Dhami"
+      >
+
+      <h3>
+        Umesh Traders Dhami
+      </h3>
+
+      <p>
+        Your trusted local partner for hardware
+        and building material requirements.
+      </p>
+
+    </div>
+
+
+    <!-- PRODUCT 5 -->
+    <div class="card">
+
+      <img
+        src="IMG-20260529-WA0000.jpg"
+        alt="Building Materials Umesh Traders Dhami"
+      >
+
+      <h3>
+        Building Materials
+      </h3>
+
+      <p>
+        Quality materials with dependable service
+        and customer satisfaction.
+      </p>
+
+    </div>
+
+
+    <!-- PRODUCT 6 -->
+    <div class="card">
+
+      <div style="
+        height:220px;
+        border-radius:12px;
+        background:#111827;
+        color:white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+        padding:20px;
+      ">
+
+        <div>
+          <div style="font-size:50px;">🏠</div>
+          <strong style="font-size:22px;">
+            Umesh Traders Dhami
+          </strong>
+          <br>
+          <span>
+            Quality • Service • Satisfaction
+          </span>
+        </div>
+
+      </div>
+
+      <h3>
+        Complete Hardware Range
+      </h3>
+
+      <p>
+        Paint, taps, sanitary, GI fittings,
+        screws, roofing sheets and more.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
+
+<!-- ABOUT -->
 <section id="about">
-<div class="about"><div><div class="title" style="text-align:left"><h2>Your Local Hardware Partner</h2></div>
-<p>Umesh Traders Dhami is focused on supplying quality hardware and building materials with dependable service and customer satisfaction.</p>
-<ul class="ticks"><li>Quality products</li><li>Competitive pricing</li><li>Helpful customer service</li><li>Wide product range</li></ul></div>
-<div class="about-box"><h2>Customer First</h2><p>Whether you are building a new home, renovating, or need everyday hardware, our goal is to make your purchase simple and reliable.</p><a class="btn primary" href="#contact">Contact Us</a></div></div>
+
+  <div class="about">
+
+    <div>
+
+      <div class="title" style="text-align:left">
+
+        <h2>
+          Your Local Hardware Partner
+        </h2>
+
+      </div>
+
+      <p>
+        Umesh Traders Dhami is focused on supplying
+        quality hardware and building materials with
+        dependable service and customer satisfaction.
+      </p>
+
+      <ul class="ticks">
+
+        <li>Quality products</li>
+
+        <li>Competitive pricing</li>
+
+        <li>Helpful customer service</li>
+
+        <li>Wide product range</li>
+
+        <li>Trusted local service</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="about-box">
+
+      <h2>
+        Customer First
+      </h2>
+
+      <p>
+        Whether you are building a new home,
+        renovating, or need everyday hardware,
+        our goal is to make your purchase simple,
+        reliable and convenient.
+      </p>
+
+      <a class="btn primary" href="#contact">
+        Contact Us
+      </a>
+
+    </div>
+
+  </div>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact">
-<div class="contact"><div class="contact-grid"><div><h2>Let's talk about your project.</h2><p>Call or WhatsApp us for product enquiries, prices and availability.</p></div>
-<div><p><strong>Business:</strong> Umesh Traders Dhami</p><p><strong>Phone / WhatsApp:</strong> <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></p><p><strong>Location:</strong> Dhami, Himachal Pradesh, India</p><a class="btn primary" href="https://wa.me/91XXXXXXXXXX">WhatsApp Us</a></div></div></div>
+
+  <div class="contact">
+
+    <div class="contact-grid">
+
+      <div>
+
+        <h2>
+          Let's talk about your project.
+        </h2>
+
+        <p>
+          Call or WhatsApp us for product enquiries,
+          prices and availability.
+        </p>
+
+        <a
+          class="btn whatsapp"
+          href="https://wa.me/919015157032"
+          target="_blank"
+        >
+          💬 WhatsApp Now
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <p>
+          <strong>Business:</strong><br>
+          Umesh Traders Dhami
+        </p>
+
+
+        <div class="phone-list">
+
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+919015157032">
+              9015157032
+            </a>
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+919418050037">
+              9418050037
+            </a>
+          </p>
+
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+919816682460">
+              9816682460
+            </a>
+          </p>
+
+        </div>
+
+
+        <p>
+          <strong>Address:</strong><br>
+          K/Chora, near CHC Dhami,<br>
+          Dhami Bazar Road, near PWD Rest House,<br>
+          UCO Bank Road,<br>
+          Himachal Pradesh, India
+        </p>
+
+
+        <a
+          class="btn primary"
+          href="https://wa.me/919015157032"
+          target="_blank"
+        >
+          WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<footer>© 2026 Umesh Traders Dhami. All rights reserved.</footer>
-</body></html>
+
+<!-- FOOTER -->
+<footer>
+
+  © 2026 Umesh Traders Dhami.
+  All rights reserved.
+
+</footer>
+
+
+</body>
+</html>
